@@ -1,6 +1,12 @@
 		<script type="text/javascript" defer="defer">
 			let dest = "jwsis.eu5.org";
 			dest = "jwsisftp01.v8.aihost.top";
-			let txt = window.location.search.substr(4);
-			location.href = "http://"+dest+"/#/m/register/"+txt;
+			let bu = "http://" + dest + "/#/m/";
+			let search = window.location.search;
+			if(search == "?login"){
+				location.href = bu+ "login";
+			}else{
+				location.href = bu + "register/"+search.substr(4);
+			}
+			
 		</script>
