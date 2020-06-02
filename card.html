@@ -40,7 +40,7 @@
   function show(){
       let cs = cards.split("\n")
       for(let i=0;i<cs.length;i++){
-        	addOne(cs[i]);
+        	addOne(cs[i], i);
       }
   }
   
@@ -50,7 +50,7 @@
   
   //location.href = "https://note.youdao.com/ynoteshare1/index.html?id=843107eaf31fbe6f720ffdaeb896963a&type=note"
   
-  function addOne(card){
+  function addOne(card, i){
       let p = document.querySelector("#pnl");
       let e = document.createElement("div");
       let s = document.createElement("span");
@@ -61,7 +61,7 @@
       b.onclick = function(){
           copyToClip(card);
       }
-      b.innerText = "复制";
+      b.innerText = "复制_"+i;
       e.appendChild(b);
       p.appendChild(e);
   }
