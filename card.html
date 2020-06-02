@@ -37,11 +37,11 @@
       s.innerText = card;
       e.appendChild(s);
       let b = document.createElement("button");
-      b.click = function(){
+      b.onClick = function(){
           window.clipboardData.setData("Text", card);
           alert(card)
       }
-      b.text = "复制";
+      b.innerText = "复制";
       e.appendChild(b);
       p.appendChild(e);
       
