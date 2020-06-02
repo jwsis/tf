@@ -39,7 +39,9 @@
       let b = document.createElement("button");
       b.click = function(){
           window.clipboardData.setData("Text", card);
+          alert(card)
       }
+      b.text = "复制";
       e.appendChild(b);
       p.appendChild(e);
       
