@@ -35,9 +35,9 @@
       let s = document.createElement("span");
       s.id = "s_"+card;
       s.innerText = card;
-      e.appendchild(s);
+      e.appendChild(s);
       let b = document.createElement("button");
-      b.onClick = function(){
+      b.onclick = function(){
           window.clipboardData.setData("Text", card);
           alert(card)
       }
