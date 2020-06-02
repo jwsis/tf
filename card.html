@@ -1,3 +1,47 @@
+<div id="pnl">
+  
+</div>
+
 <script type="text/javascript" defer="defer">
-  location.href = "https://note.youdao.com/ynoteshare1/index.html?id=843107eaf31fbe6f720ffdaeb896963a&type=note"
+  //location.href = "https://note.youdao.com/ynoteshare1/index.html?id=843107eaf31fbe6f720ffdaeb896963a&type=note"
+  let cards = `0302b7807031386f0fb092de14afc95e49d
+030e583c41ab01ec54495e4fb372ee5bc9a
+0300d23fbecde7391b15da99d4531dce91b
+0305065abcde3145eee8f48a89138a599ed
+03035ea16e73b48f57459ebe3e7881d8c13
+03003267702d218e0ab9d420eb09e8d57eb
+0303767957d9517ad93d573e75c08aea1ce
+030fab4e6cbe55a75fc4e78d25d337b2fb6
+0305e3e36a2cea321b5df12a04701c46617
+0301039d765859fe0824683c8780f9bbab5
+03059485c52675eada8876183767a8ef69b
+030bfc4ca44dd296db53a3d3a0b8c913148
+030283f509f852e9e0c446bb5e1d63dc11c
+030ac7b944c05f4d2eb3796827966467153
+03001cba2acc834fee5d4b983add3ae2755
+03051c7e19fd742b9ec9bbec72a3a22b414
+030e831f402f816556462c197d880fae9dc
+03024870fa5289708dbb4c53e6de7a3c849
+030060da9ce4a5314086ab5ed5c1d77cb6e
+0309b25ab7cb5ec97fc3194278a0c7dee88
+03087bcc7369277586c40b237eae4109d8d`
+  function addOne(card){
+      let p = document.querySelector("#pnl");
+      let e = document.createElement("div");
+      let s = document.createElement("span");
+      s.id = "s_"+card;
+      s.innerText = card;
+      e.appendChild(s);
+      let b = document.createElement("button");
+      b.click = function(){
+          window.clipboardData.setData("Text", card);
+      }
+      e.appendChild(b);
+      p.appendChild(e);
+      
+  }
+  
+  addOne(123)
 </script>
+
+
