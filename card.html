@@ -8,43 +8,6 @@
 </div>
 
 <script type="text/javascript" defer="defer">
-  //location.href = "https://note.youdao.com/ynoteshare1/index.html?id=843107eaf31fbe6f720ffdaeb896963a&type=note"
-  
-  function addOne(card){
-      let p = document.querySelector("#pnl");
-      let e = document.createElement("div");
-      let s = document.createElement("span");
-      s.id = "s_"+card;
-      s.innerText = card;
-      e.appendChild(s);
-      let b = document.createElement("button");
-      b.onclick = function(){
-          alert(card);
-          copyToClip(card);
-      }
-      b.innerText = "复制";
-      e.appendChild(b);
-      p.appendChild(e);
-  }
-  
-  addOne(123)
- function copyToClip(content, message) {
-    var aux = document.createElement("input"); 
-    aux.setAttribute("value", content); 
-    document.body.appendChild(aux); 
-    aux.select();
-    document.execCommand("copy"); 
-    document.body.removeChild(aux);
-    if (message == null) {
-        alert("复制成功");
-    } else{
-        alert(message);
-    }
-}
-
-  
-  
-  
   
   let cards = `0302b7807031386f0fb092de14afc95e49d
 030e583c41ab01ec54495e4fb372ee5bc9a
@@ -67,6 +30,54 @@
 030060da9ce4a5314086ab5ed5c1d77cb6e
 0309b25ab7cb5ec97fc3194278a0c7dee88
 03087bcc7369277586c40b237eae4109d8d`
+  
+  function show(){
+      let cs = cards.split("\n")
+      for(let i=0;i<cs.length;i++){
+        	addOne(cs[i]);
+      }
+  }
+  
+  show()
+  
+  
+  
+  //location.href = "https://note.youdao.com/ynoteshare1/index.html?id=843107eaf31fbe6f720ffdaeb896963a&type=note"
+  
+  function addOne(card){
+      let p = document.querySelector("#pnl");
+      let e = document.createElement("div");
+      let s = document.createElement("span");
+      s.id = "s_"+card;
+      s.innerText = card;
+      e.appendChild(s);
+      let b = document.createElement("button");
+      b.onclick = function(){
+          copyToClip(card);
+      }
+      b.innerText = "复制";
+      e.appendChild(b);
+      p.appendChild(e);
+  }
+  
+ function copyToClip(content, message) {
+    var aux = document.createElement("input"); 
+    aux.setAttribute("value", content); 
+    document.body.appendChild(aux); 
+    aux.select();
+    document.execCommand("copy"); 
+    document.body.removeChild(aux);
+    if (message == null) {
+        alert("复制成功");
+    } else{
+        alert(message);
+    }
+}
+
+  
+  
+  
+  
 </script>
 
 
